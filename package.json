@@ -13,6 +13,7 @@
     "floating-vue": "2.0.0-beta.24",
     "vue-gtag": "^2.0.1",
     "vue-hotjar": "^1.4.0",
-    "vue-imask": "^7.5.0"
+    "vue-imask": "^7.5.0",
+    "vee-validate": "4.11.7"
   }
 }
