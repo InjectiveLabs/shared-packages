@@ -8,10 +8,10 @@
     "@injectivelabs/token-utils": "1.14.11-beta.11",
     "@injectivelabs/utils": "1.14.11-beta.10",
     "@injectivelabs/networks": "1.14.11-beta.13",
-    "@injectivelabs/sdk-ts": "1.14.11-beta.87",
-    "@injectivelabs/sdk-ui-ts": "1.14.11-beta.112",
-    "@injectivelabs/token-metadata": "1.14.11-beta.62",
-    "@injectivelabs/wallet-ts": "1.14.11-beta.101",
+    "@injectivelabs/sdk-ts": "1.14.11-beta.88",
+    "@injectivelabs/sdk-ui-ts": "1.14.11-beta.113",
+    "@injectivelabs/token-metadata": "1.14.11-beta.63",
+    "@injectivelabs/wallet-ts": "1.14.11-beta.102",
     "@vuepic/vue-datepicker": "^5.4.0",
     "@bangjelkoski/ens-validation": "^0.1.1",
     "@injectivelabs/nuxt-bugsnag": "0.0.3",
@@ -22,6 +22,12 @@
     "vue-hotjar": "^1.4.0",
     "vue-imask": "^7.5.0",
     "vee-validate": "4.11.7"
+  },
+  "resolutions": {
+    "@ledgerhq/devices": "6.27.1",
+    "@ledgerhq/errors": "6.16.3",
+    "@ledgerhq/hw-transport": "6.27.1",
+    "@ledgerhq/hw-transport-webhid": "6.27.1"
   },
   "overrides": {
     "@ledgerhq/devices": "6.27.1",
