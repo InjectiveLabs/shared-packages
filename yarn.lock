@@ -1262,10 +1262,10 @@
     "@bugsnag/source-maps" "^2.3.1"
     "@nuxt/kit" "^3.0.0-rc.13"
 
-"@injectivelabs/sdk-ts@1.14.12-beta.6":
-  version "1.14.12-beta.6"
-  resolved "https://registry.yarnpkg.com/@injectivelabs/sdk-ts/-/sdk-ts-1.14.12-beta.6.tgz#97b640f04bcad748c024b4a98b7d4ee5df085cff"
-  integrity sha512-6+jFF7G2opwUhX6XZ39kBq6pFJQWbhBRUKxxC4AQUdHBm1hgcBfq2Hvdt1JqDta7an9GmctBxHuPqtab3nMW2g==
+"@injectivelabs/sdk-ts@1.14.12-beta.7":
+  version "1.14.12-beta.7"
+  resolved "https://registry.yarnpkg.com/@injectivelabs/sdk-ts/-/sdk-ts-1.14.12-beta.7.tgz#16bd02622eab3248c07f3b5dea3d226d050e858b"
+  integrity sha512-WZ4xrj+mnWC6nGh2wkjFFa6lOsQevjSmmllYzXJ8Wkr5bA3wdspLhm6Jsyg7doVU9et8KQnMGXE5afMYgN7ddQ==
   dependencies:
     "@apollo/client" "^3.5.8"
     "@cosmjs/amino" "^0.32.3"
@@ -1303,7 +1303,7 @@
     shx "^0.3.2"
     snakecase-keys "^5.4.1"
 
-"@injectivelabs/sdk-ts@^1.14.12-beta.6":
+"@injectivelabs/sdk-ts@^1.14.12-beta.7":
   version "1.14.12-dev.1"
   resolved "https://registry.yarnpkg.com/@injectivelabs/sdk-ts/-/sdk-ts-1.14.12-dev.1.tgz#b9966f95512ecd09bbf7faee3cad677c9163876b"
   integrity sha512-u66JNwurKYkrr4uGjtrojUTAGig3j2sXQFfPOASSiEARNj5SHg1O+5+R9rvprZTEH2YnqWlPnFOO2QMN1mdqtw==
@@ -1396,10 +1396,10 @@
     snakecase-keys "^5.1.2"
     store2 "^2.12.0"
 
-"@injectivelabs/wallet-ts@1.14.12-beta.6":
-  version "1.14.12-beta.6"
-  resolved "https://registry.yarnpkg.com/@injectivelabs/wallet-ts/-/wallet-ts-1.14.12-beta.6.tgz#350e22c9c58cfc60c1da55a4df5da08b402d6836"
-  integrity sha512-+sup25CEZl7gI9t7Ow17z9boMMunm0sYdtTz7w7dt0DmKQ/7pKYJkZmJ9ybea/yu4RI6osB47cvqc2Zf0ywx3w==
+"@injectivelabs/wallet-ts@1.14.12-beta.7":
+  version "1.14.12-beta.7"
+  resolved "https://registry.yarnpkg.com/@injectivelabs/wallet-ts/-/wallet-ts-1.14.12-beta.7.tgz#409f24dfc4ab24af1e98c6b8b91cdfbe8744c79e"
+  integrity sha512-1m1QZTtp9nYTXuIZRZY+4V6PXZB3zGFWNxdpxtTrdkRqiu6F6MyAPFPuAgN+Y5vri9uDOZC7Gz3rj9HYMhjKlQ==
   dependencies:
     "@cosmjs/launchpad" "0.27.1"
     "@cosmjs/proto-signing" "0.32.2"
@@ -1409,7 +1409,7 @@
     "@ethereumjs/tx" "^4.1.1"
     "@injectivelabs/exceptions" "^1.14.12-beta.0"
     "@injectivelabs/networks" "^1.14.12-beta.0"
-    "@injectivelabs/sdk-ts" "^1.14.12-beta.6"
+    "@injectivelabs/sdk-ts" "^1.14.12-beta.7"
     "@injectivelabs/ts-types" "^1.14.12-beta.0"
     "@injectivelabs/utils" "^1.14.12-beta.0"
     "@keplr-wallet/cosmos" "^0.12.71"
