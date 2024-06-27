@@ -46,7 +46,7 @@ jobs:
     - name: Push changes
       run: |
         cd injective-ui
-        git push origin update-from-shared-packages
+        git push origin update-from-shared-packages -f
 
     - name: Create Pull Request
       env:
