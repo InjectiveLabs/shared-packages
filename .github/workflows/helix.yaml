@@ -16,7 +16,7 @@ jobs:
       with:
         repository: InjectiveLabs/injective-ui
         path: injective-ui
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GH_TOKEN }}
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
@@ -47,9 +47,9 @@ jobs:
 
     - name: Create Pull Request
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-        gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
+        gh auth login --with-token <<< "${{ secrets.GH_TOKEN }}"
         gh pr create --repo InjectiveLabs/injective-ui --head update-from-shared-packages --base dev --title "Package bump" --body "This is an automated pull request created by GitHub Actions."
 
     - name: Cleanup
