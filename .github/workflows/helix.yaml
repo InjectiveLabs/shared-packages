@@ -53,8 +53,3 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         gh pr create --repo InjectiveLabs/injective-ui --head update-from-shared-packages --base master --title "Package bump" --body "This is an automated pull request created by GitHub Actions."
-
-    - name: Cleanup
-      run: |
-        cd injective-ui
-        git branch -D update-from-shared-packages
