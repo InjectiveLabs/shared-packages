@@ -1,4 +1,4 @@
-name: Update shared packages on Helix
+name: Update shared packages on Injective-ui
 
 on:
   push:
@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout injective-helix repository
+    - name: Checkout injective-ui repository
       uses: actions/checkout@v2
       with:
-        repository: InjectiveLabs/injective-helix
-        path: injective-helix
+        repository: InjectiveLabs/injective-ui
+        path: injective-ui
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set up Node.js
@@ -25,23 +25,24 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd injective-helix
+        cd injective-ui
+        cd layer
         yarn install
 
     - name: Create branch
       run: |
-        cd injective-helix
+        cd injective-ui
         git checkout -b update-from-shared-packages
 
     - name: Commit changes
       run: |
-        cd injective-helix
+        cd injective-ui
         git add .
         git commit -m "chore: update from shared-packages"
 
     - name: Push changes
       run: |
-        cd injective-helix
+        cd injective-ui
         git push origin update-from-shared-packages
 
     - name: Create Pull Request
@@ -49,9 +50,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
-        gh pr create --repo InjectiveLabs/injective-helix --head update-from-shared-packages --base dev --title "Package bump" --body "This is an automated pull request created by GitHub Actions."
+        gh pr create --repo InjectiveLabs/injective-ui --head update-from-shared-packages --base dev --title "Package bump" --body "This is an automated pull request created by GitHub Actions."
 
     - name: Cleanup
       run: |
-        cd injective-helix
+        cd injective-ui
         git branch -D update-from-shared-packages
