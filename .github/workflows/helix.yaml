@@ -1,0 +1,52 @@
+name: Update shared packages on Helix
+
+on:
+  push:
+    branches:
+      - master
+      - ci
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout injective-helix repository
+      uses: actions/checkout@v2
+      with:
+        repository: InjectiveLabs/injective-helix
+        path: injective-helix
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: |
+        cd injective-helix
+        yarn install
+
+    - name: Create branch
+      run: |
+        cd injective-helix
+        git checkout -b update-from-shared-packages
+
+    - name: Commit changes
+      run: |
+        cd injective-helix
+        git add .
+        git commit -m "chore: update from shared-packages"
+
+    - name: Push changes
+      run: |
+        cd injective-helix
+        git push origin update-from-shared-packages
+
+    - name: Create Pull Request
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
+        gh pr create --repo InjectiveLabs/injective-helix --head update-from-shared-packages --base dev --title "Package bump" --body "This is an automated pull request created by GitHub Actions."
