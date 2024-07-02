@@ -1,0 +1,41 @@
+name: Package bump Helix
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout helix repository
+        uses: actions/checkout@v2
+        with:
+          repository: injectiveLabs/injective-helix
+          path: helix
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18.x"
+
+      - name: Install dependencies
+        run: |
+          cd helix
+          yarn install
+
+      - name: Commit changes
+        run: |
+          cd helix
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "chore: package bump"
+
+      - name: Push changes
+        run: |
+          cd helix
+          git push origin dev
