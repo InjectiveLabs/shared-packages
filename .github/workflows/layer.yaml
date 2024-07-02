@@ -1,7 +1,6 @@
 name: Package bump layer
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - master
@@ -44,9 +43,8 @@ jobs:
           git push origin master
 
       - name: Get Pull Request Number
-        id: pr
         run: |
-          echo "::set-output name=pull_request_number::$(gh pr view --json number -q .number || echo "")"
-          echo ${{ steps.pr.outputs.pull_request_number }}
+          echo ${{ github.event.issue.number }}
+          echo ${{ github }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
