@@ -41,13 +41,6 @@ jobs:
           cd injective-ui
           git push origin master
 
-      - name: Get Pull Request Number
-        run: |
-          echo ${{ github.event.issue.number }}
-          echo ${{ github }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-
     # - name: Create branch
     #   run: |
     #     cd injective-ui
