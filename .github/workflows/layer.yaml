@@ -1,10 +1,9 @@
-name: Package bump layer
+name: Package bump Layer
 
 on:
   push:
     branches:
       - master
-      - ci
 
 jobs:
   deploy:
@@ -48,3 +47,14 @@ jobs:
           echo ${{ github }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+    # - name: Create branch
+    #   run: |
+    #     cd injective-ui
+    #     git checkout -b update-from-shared-packages
+
+    # - name: Create Pull Request
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    #   run: |
+    #     gh pr create --repo InjectiveLabs/injective-ui --head update-from-shared-packages --base master --title "Package bump" --body "This is an automated pull request created by GitHub Actions."

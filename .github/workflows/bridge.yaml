@@ -1,4 +1,4 @@
-name: Package bump Mito
+name: Package bump Bridge
 
 on:
   push:
@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout mito-ui repository
+      - name: Checkout bridge repository
         uses: actions/checkout@v2
         with:
-          repository: mitoFinance/mito-ui
-          path: mito-ui
+          repository: injectiveLabs/injective-bridge
+          path: bridge
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Set up Node.js
@@ -24,12 +24,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd mito-ui
+          cd bridge
           yarn install
 
       - name: Commit changes
         run: |
-          cd mito-ui
+          cd bridge
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git add .
@@ -37,5 +37,5 @@ jobs:
 
       - name: Push changes
         run: |
-          cd mito-ui
+          cd bridge
           git push origin dev
