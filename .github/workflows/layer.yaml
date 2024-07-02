@@ -1,0 +1,52 @@
+name: Package bump layer
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - ci
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout injective-ui repository
+        uses: actions/checkout@v2
+        with:
+          repository: InjectiveLabs/injective-ui
+          path: injective-ui
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18.x"
+
+      - name: Install dependencies
+        run: |
+          cd injective-ui
+          cd layer
+          yarn install
+
+      - name: Commit changes
+        run: |
+          cd injective-ui
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "chore: package bump"
+
+      - name: Push changes
+        run: |
+          cd injective-ui
+          git push origin master
+
+      - name: Get Pull Request Number
+        id: pr
+        run: |
+          echo "::set-output name=pull_request_number::$(gh pr view --json number -q .number || echo "")"
+          echo ${{ steps.pr.outputs.pull_request_number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
