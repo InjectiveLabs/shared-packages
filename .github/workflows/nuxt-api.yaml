@@ -24,12 +24,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd injective-nuxt-api
+          cd nuxtApi
           yarn install
 
       - name: Commit changes
         run: |
-          cd injective-nuxt-api
+          cd nuxtApi
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git add .
@@ -37,5 +37,5 @@ jobs:
 
       - name: Push changes
         run: |
-          cd injective-nuxt-api
+          cd nuxtApi
           git push origin master
