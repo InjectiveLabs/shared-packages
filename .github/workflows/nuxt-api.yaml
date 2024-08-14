@@ -1,0 +1,41 @@
+name: Package bump nuxt api (cache)
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout nuxt api repository
+        uses: actions/checkout@v2
+        with:
+          repository: injectiveLabs/injective-nuxt-api
+          path: bridge
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18.x"
+
+      - name: Install dependencies
+        run: |
+          cd injective-nuxt-api
+          yarn install
+
+      - name: Commit changes
+        run: |
+          cd injective-nuxt-api
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "chore: package bump"
+
+      - name: Push changes
+        run: |
+          cd injective-nuxt-api
+          git push origin master
