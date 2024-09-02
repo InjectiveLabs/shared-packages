@@ -23,7 +23,8 @@
     "vee-validate": "4.11.7",
     "vue-gtag": "^2.0.1",
     "vue-hotjar": "^1.4.0",
-    "vue-imask": "^7.5.0"
+    "vue-imask": "^7.5.0",
+    "qrcode-vue3": "1.6.8"
   },
   "resolutions": {
     "@ledgerhq/devices": "6.27.1",
