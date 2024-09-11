@@ -1268,42 +1268,6 @@
   version "1.14.14"
   resolved "https://registry.yarnpkg.com/@injectivelabs/sdk-ts/-/sdk-ts-1.14.14.tgz#d514c4c108552005f14444cff4f4458dc9a08c6d"
   integrity sha512-hjFHCa6YPkwXz/Ekx3dO3G9pmGLgUcS91hikPRSugvWJlprTvn0+wdEoT7u3iJpPx0eD/rJISu1tvSKQZrhliQ==
-  dependencies:
-    "@apollo/client" "^3.5.8"
-    "@cosmjs/amino" "^0.32.3"
-    "@cosmjs/proto-signing" "^0.32.3"
-    "@cosmjs/stargate" "^0.32.3"
-    "@ethersproject/bytes" "^5.7.0"
-    "@injectivelabs/core-proto-ts" "0.0.30"
-    "@injectivelabs/dmm-proto-ts" "1.0.20"
-    "@injectivelabs/exceptions" "^1.14.14"
-    "@injectivelabs/grpc-web" "^0.0.1"
-    "@injectivelabs/grpc-web-node-http-transport" "^0.0.2"
-    "@injectivelabs/grpc-web-react-native-transport" "^0.0.2"
-    "@injectivelabs/indexer-proto-ts" "1.11.49"
-    "@injectivelabs/mito-proto-ts" "1.0.65"
-    "@injectivelabs/networks" "^1.14.14"
-    "@injectivelabs/test-utils" "^1.14.14"
-    "@injectivelabs/ts-types" "^1.14.14"
-    "@injectivelabs/utils" "^1.14.14"
-    "@metamask/eth-sig-util" "^4.0.0"
-    "@noble/curves" "^1.4.0"
-    axios "^1.6.4"
-    bech32 "^2.0.0"
-    bip39 "^3.0.4"
-    cosmjs-types "^0.9.0"
-    ethereumjs-util "^7.1.4"
-    ethers "^6.5.1"
-    google-protobuf "^3.21.0"
-    graphql "^16.3.0"
-    http-status-codes "^2.2.0"
-    js-sha3 "^0.8.0"
-    jscrypto "^1.0.3"
-    keccak256 "^1.0.6"
-    link-module-alias "^1.2.0"
-    secp256k1 "^4.0.3"
-    shx "^0.3.2"
-    snakecase-keys "^5.4.1"
 
 "@injectivelabs/test-utils@^1.14.14":
   version "1.14.14"
@@ -6921,17 +6885,10 @@ qr.js@0.0.0:
   resolved "https://registry.yarnpkg.com/qr.js/-/qr.js-0.0.0.tgz#cace86386f59a0db8050fa90d9b6b0e88a1e364f"
   integrity sha512-c4iYnWb+k2E+vYpRimHqSu575b1/wKl4XFeJGpFmrJQz5I88v9aY2czh7s0w36srfCM1sXgC/xpoJz5dJfq+OQ==
 
-qrcode-generator@^1.4.3, qrcode-generator@^1.4.4:
+qrcode-generator@^1.4.3:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/qrcode-generator/-/qrcode-generator-1.4.4.tgz#63f771224854759329a99048806a53ed278740e7"
   integrity sha512-HM7yY8O2ilqhmULxGMpcHSF1EhJJ9yBj8gvDEuZ6M+KGJ0YY2hKpnXvRD+hZPLrDVck3ExIGhmPtSdcjC+guuw==
-
-qrcode-vue3@^1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/qrcode-vue3/-/qrcode-vue3-1.7.1.tgz#d2cf627f9ffefd48d7ffb1dc0402a831781890df"
-  integrity sha512-Xa82NslFJUqsnQbLtc1qO+xPEOeFaTRxktg3ugRd2Pk116kta1X+7GLSEPQj9gor8jWVyfmLmhYZHuANnRZoLQ==
-  dependencies:
-    qrcode-generator "^1.4.4"
 
 qrcode.react@^1.0.1:
   version "1.0.1"
