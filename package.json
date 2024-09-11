@@ -21,6 +21,7 @@
     "js-confetti": "^0.12.0",
     "nuxt-lcp-speedup": "^0.5.2",
     "qr-code-generator-vue3": "^1.4.21",
+    "qrcode-vue3": "^1.7.1",
     "vee-validate": "4.11.7",
     "vue-gtag": "^2.0.1",
     "vue-hotjar": "^1.4.0",
