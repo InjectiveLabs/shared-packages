@@ -1348,10 +1348,10 @@
     snakecase-keys "^5.1.2"
     store2 "^2.12.0"
 
-"@injectivelabs/wallet-ts@1.14.15-beta.5":
-  version "1.14.15-beta.5"
-  resolved "https://registry.yarnpkg.com/@injectivelabs/wallet-ts/-/wallet-ts-1.14.15-beta.5.tgz#5526aae51d18479c35dee1a65b4f1740f073699b"
-  integrity sha512-6JmqPdOJAFM+N6To35La43oSTl5/tim0FKvxrZKl5RUpbmFnGkqsKFClJcSWLUvoMRSFBsnJDEVTSiOEyuw9+g==
+"@injectivelabs/wallet-ts@1.14.15-beta.6":
+  version "1.14.15-beta.6"
+  resolved "https://registry.yarnpkg.com/@injectivelabs/wallet-ts/-/wallet-ts-1.14.15-beta.6.tgz#c6fecc77108ba9685eb090060c3b040f46469cc8"
+  integrity sha512-A+lKbgGPoSpGnWu8UHTFPE+lnCtUvxJPSYFuhlXcu1LyGDUn6FHC65wGUfKS6vPuMgMj7rynIAsqQlNGrMc0JA==
   dependencies:
     "@cosmjs/launchpad" "0.27.1"
     "@cosmjs/proto-signing" "0.32.2"
