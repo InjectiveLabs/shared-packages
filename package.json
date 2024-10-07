@@ -22,7 +22,7 @@
     "nuxt-lcp-speedup": "^0.5.2",
     "nuxt-vitalizer": "0.10.0",
     "qr-code-generator-vue3": "^1.4.21",
-    "vee-validate": "4.11.7",
+    "vee-validate": "4.13.2",
     "vue-gtag": "^2.0.1",
     "vue-hotjar": "^1.4.0",
     "vue-imask": "^7.5.0"
