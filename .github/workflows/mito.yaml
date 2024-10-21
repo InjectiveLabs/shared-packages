@@ -11,16 +11,17 @@ jobs:
 
     steps:
       - name: Checkout mito-ui repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
-          repository: mitoFinance/mito-ui
           path: mito-ui
+          fetch-depth: 0
+          repository: mitoFinance/mito-ui
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "18.x"
+          node-version: 20.x
 
       - name: Install dependencies
         run: |

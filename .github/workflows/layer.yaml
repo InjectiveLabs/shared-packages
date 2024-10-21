@@ -11,16 +11,17 @@ jobs:
 
     steps:
       - name: Checkout injective-ui repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
-          repository: InjectiveLabs/injective-ui
+          fetch-depth: 0
           path: injective-ui
           token: ${{ secrets.GH_TOKEN }}
+          repository: InjectiveLabs/injective-ui
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "18.x"
+          node-version: 20.x
 
       - name: Install dependencies
         run: |
@@ -40,14 +41,3 @@ jobs:
         run: |
           cd injective-ui
           git push origin master
-
-    # - name: Create branch
-    #   run: |
-    #     cd injective-ui
-    #     git checkout -b update-from-shared-packages
-
-    # - name: Create Pull Request
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-    #   run: |
-    #     gh pr create --repo InjectiveLabs/injective-ui --head update-from-shared-packages --base master --title "Package bump" --body "This is an automated pull request created by GitHub Actions."

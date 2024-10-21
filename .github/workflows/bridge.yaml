@@ -11,16 +11,17 @@ jobs:
 
     steps:
       - name: Checkout bridge repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
-          repository: injectiveLabs/injective-bridge
           path: bridge
+          fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
+          repository: injectiveLabs/injective-bridge
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "18.x"
+          node-version: 20.x
 
       - name: Install dependencies
         run: |
