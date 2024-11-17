@@ -8,7 +8,7 @@
     "@bangjelkoski/ens-validation": "^0.1.1",
     "@injectivelabs/exceptions": " 1.14.19",
     "@injectivelabs/networks": " 1.14.19",
-    "@injectivelabs/nuxt-bugsnag": "0.0.11",
+    "@injectivelabs/nuxt-bugsnag": "0.0.12",
     "@injectivelabs/ts-types": " 1.14.19",
     "@injectivelabs/utils": " 1.14.19",
     "@injectivelabs/sdk-ts": "1.14.20-beta.2",

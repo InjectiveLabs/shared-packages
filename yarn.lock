@@ -1412,10 +1412,10 @@
     "@injectivelabs/utils" "^1.14.19"
     shx "^0.3.2"
 
-"@injectivelabs/nuxt-bugsnag@0.0.11":
-  version "0.0.11"
-  resolved "https://registry.npmjs.org/@injectivelabs/nuxt-bugsnag/-/nuxt-bugsnag-0.0.11.tgz#d66ac77a802fcb87680e5420e2126eba4a57d94b"
-  integrity sha512-Gj4hJv/fUMQtgKRLQYaCt155hotRzv+DIFaoMoo1JnjyiIR9SmvSYU/azwMLhkHRQxIW+bb7CDY4enffwRwwrg==
+"@injectivelabs/nuxt-bugsnag@0.0.12":
+  version "0.0.12"
+  resolved "https://registry.npmjs.org/@injectivelabs/nuxt-bugsnag/-/nuxt-bugsnag-0.0.12.tgz#3fa5ce9cd3dc0efa3e58a4904f2dcd039ba2f76d"
+  integrity sha512-mI1Jp/dMcAlnptKI8/ERTjN7H+gYMnXNqws2Z+6ur+Za/hjJqehPmWU67PuiHryECDmVkTM7UZ08noMBAmb++g==
   dependencies:
     "@bugsnag/browser-performance" "^2.8.0"
     "@bugsnag/js" "^8.0.0"
